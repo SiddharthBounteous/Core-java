@@ -1,0 +1,24 @@
+to support backend compatibility it supports object
+1.2 ->collections
+1.5 -> generic
+
+Integer A=100
+Integer B=100
+
+Integer C=200
+Integer D=200
+
+hashcode()
+equals()
+
+blocking queue
+Thread safe
+
+
+hash table is thread safe but hash map is not thread safe
+
+after 8 capacity it uses red black tree in hash map
+
+concurrent hashmap 
+
+when we require indexing and not indexing

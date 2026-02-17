@@ -1,0 +1,17 @@
+error  and exceptions
+1. error-> outofmemory, memoryoverflow(JVM based mostly)
+
+failfast and failsafe
+
+exception: any failure in business logic
+(not a part of jvm)
+
+throw-> you can catch exception in the called method itself  (program will continue to run)
+
+throws-> you can propagate the exception to the calling method itself
+
+we generally see error codes, then see only stack trace
+
+log.error()
+
+finally is used for closing connections and clearing resources.
