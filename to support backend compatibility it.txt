@@ -25,3 +25,44 @@ when we require indexing and not indexing
 
 
 on the basis of return type overloading is not possible
+
+
+//major advantage of java is WORA(Write once run anywhere)
+JVM-abstract machine(not exists physically)(not platform independent)
+but java program is platform independent)
+
+JVM has just in time compiler (take byte code and convert it to machine code)
+byte code is platform independent
+javac student.java  (pass through compiler)
+byte code-> .class (run anywhere)
+
+JRE(Java runtime environment)
+- JVM + class libraries(util,math etc)
+JVM needs those libraries in classpath to run code
+if only JRE you can run any java program but cannot code it
+
+JDK->java development kit
+- write java code
+JDK=(JRE+debugger+compiler+prog lang)
+all 3 are platform dependent
+
+JSE(java standard edition) -> core java
+JEE(enterprise) -> JSP, Transaction API, Persistence API
+JME(mobile/micro)
+
+1 file can have only one public class. why?
+-> main method should be inside public class as JVM invokes main method 
+->public class name should be same as file name
+(prevent JVM ambiguity)
+
+JVM Calls the main method to start the program
+JVM doesn't require to create a object for the main class that's why static
+JVM cannot access instance variables without an object.
+
+Java by default has object class which is parent of all classes which has toString method, wait, notify, clone, equals
+child object can be stored in parent reference
+
+nested class is of two types-> (inner class)(non-static) and static nested class
+
+//nested classes can be created also as private and protected
+lambda expression could work only with functional Interface(way to implement functional interface)
