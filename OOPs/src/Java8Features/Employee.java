@@ -7,14 +7,44 @@ import java.util.stream.Collectors;
 
 public class Employee {
 
-    String name;
-    int salary;
-    String email;
+    private int employeeId;
 
-    public Employee(String name, int salary, String email) {
+    public int getEmployeeId() {
+        return employeeId;
+    }
+
+    public void setEmployeeId(int employeeId) {
+        this.employeeId = employeeId;
+    }
+
+    private String name;
+    private int salary;
+    private String email;
+    private String department;
+    private List<String> skills;
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public List<String> getSkills() {
+        return skills;
+    }
+
+    public void setSkills(List<String> skills) {
+        this.skills = skills;
+    }
+
+    public Employee(int employeeId,String name, int salary, String email,String department) {
+        this.employeeId=employeeId;
         this.name = name;
         this.salary = salary;
         this.email=email;
+        this.department=department;
     }
 
     public String getName() {
@@ -42,11 +72,17 @@ public class Employee {
     }
 
     public static void main(String[] args) {
-        Employee ex1=new Employee("Siddharth",100000,"Siddharth45@gmail.com");
-        Employee ex2=new Employee("Rahul",150000,"xyz@gmail.com");
-        Employee ex3=new Employee("Sohan",130000,"Sohan@gmail.com");
-        Employee ex4=new Employee("Mohan",155600,"Mohan@gmail.com");
-        Employee ex5=new Employee("Karan",30000,"Karan@gmail.com");
+        Employee ex1=new Employee(1,"Siddharth",100000,"Siddharth45@gmail.com","CSE");
+        Employee ex2=new Employee(2,"Rahul",150000,"xyz@gmail.com","CSE");
+        Employee ex3=new Employee(3,"Sohan",130000,"Sohan@gmail.com","Mechanical");
+        Employee ex4=new Employee(4,"Mohan",155600,"Mohan@gmail.com","Electrical");
+        Employee ex5=new Employee(5,"Karan",30000,"Karan@gmail.com","CSE");
+
+        ex1.setSkills(List.of("Java", "Spring Boot", "SQL"));
+        ex2.setSkills(List.of("Java", "C++"));
+        ex3.setSkills(List.of("Java", "Spring Boot", "MongoDB"));
+        ex4.setSkills(List.of("Java", "Rust", "System Design"));
+        ex5.setSkills(List.of("C", "Python", "Machine Learning"));
 
 
         List<Employee>li=List.of(ex1,ex2,ex3,ex4,ex5);

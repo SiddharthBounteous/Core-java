@@ -14,7 +14,7 @@ public class Assignment {
             System.out.println("The file1 writing operation completed!");
             writer.close();
         }
-        catch (IOException e) {
+        catch(IOException e) {
             e.printStackTrace();
         }
 

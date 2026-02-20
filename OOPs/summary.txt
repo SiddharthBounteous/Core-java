@@ -1,0 +1,3 @@
+Error Count = 11
+Warn Count = 15
+Info Count = 13

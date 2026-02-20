@@ -1,0 +1,3 @@
+Java Input Output
+
+when we click on keyboard how it shows on screen
