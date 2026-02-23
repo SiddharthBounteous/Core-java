@@ -2,7 +2,7 @@ package Generics;
 
 import java.util.*;
 
-public class GenericDemo {
+public class Question4 {
 
     // Generic copy method
     public static <T> void copy(List<? extends T> source,List<? super T> destination) {
@@ -21,7 +21,7 @@ public class GenericDemo {
         List<Integer> intList = Arrays.asList(1, 2, 3);
         List<Number> numberList = new ArrayList<>();
 
-        copy(intList, intList);
+        copy(intList, numberList);
         System.out.println("After copying intList to numberList:");
         System.out.println(numberList);
         System.out.println();

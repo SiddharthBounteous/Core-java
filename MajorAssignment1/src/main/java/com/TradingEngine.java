@@ -62,12 +62,12 @@ public class TradingEngine {
             e.printStackTrace();
         }
 
-//        try{
-//            executorService.awaitTermination(1, TimeUnit.MINUTES);
-//            System.out.println("All trades processed successfully.\n");
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        try{
+            executorService.awaitTermination(1, TimeUnit.MINUTES);
+            System.out.println("All trades processed successfully.\n");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         generateReports();
 
