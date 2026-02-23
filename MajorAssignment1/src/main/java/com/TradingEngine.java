@@ -3,7 +3,6 @@ package com;
 import com.TradingDb.DatabaseManager;
 import com.TradingModel.Account;
 import com.TradingModel.Trade;
-import org.postgresql.jdbc.PgConnection;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -63,12 +62,12 @@ public class TradingEngine {
             e.printStackTrace();
         }
 
-        try{
-            executorService.awaitTermination(1, TimeUnit.MINUTES);
-            System.out.println("All trades processed successfully.\n");
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try{
+//            executorService.awaitTermination(1, TimeUnit.MINUTES);
+//            System.out.println("All trades processed successfully.\n");
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
 
         generateReports();
 
