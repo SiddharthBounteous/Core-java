@@ -1,0 +1,12 @@
+Threading
+
+Completable future
+
+CompletableFuture<Integer>cf=CompletableFuture.supplyAsync(()->10).thenApply(x->x*2);
+cf.join()
+
+write a program so that one thread print odd number and one thread print even number till 100
+write a program so that one will print primt number and other thread print non prime number
+using four different threads print a b c d 200 times
+producer comsumer problem(by both thread class and runnable interface)
+future and completable future

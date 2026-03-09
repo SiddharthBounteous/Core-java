@@ -1,0 +1,21 @@
+create a SPRING BOOT Application
+ 
+1. create rest endpoints for student management system .
+ 
+it should be able to update the values in the database for new student , delete any existing student , update student details .
+for on the fly database you can use H2 db for the same.
+ 
+2. in case if there is any record of student is not there , create a custom exception "StudentNotFoundException"
+capture all the apis using the postman.
+ 
+3. in case if we try to find student by department and if the department is not there , it should throw custom exception "DepartmentNotFoundException"
+ 
+4. All the exception should be handled using the global exception handling.
+ 
+5. create a seprate sprint boot application , create a rest endpoint like "getPreAssementDetails" and consume the details of it in your previous spring application using the restTemplate and show the details using the endpoints for the student management system.
+ 
+6. make sure all the beans are lazy initialized and should be created on the demand.
+ 
+7. instead of using the getters and setters make use of Lombok .
+ 
+8. in your JPA call make sure to use transactional mechanism .

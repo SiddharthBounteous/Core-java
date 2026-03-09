@@ -1,0 +1,23 @@
+IOC has reference of the class
+JBoss server
+dev qat 
+test driven development, business driven development
+component scan only looks for classpath
+
+patch updates all class references
+put
+
+pathvaribale (in url)
+dao is used for data operations
+
+Spring MVC will automatically create objects
+Constructor injection is strict
+Method injection is not strict
+
+
+maven life cycle
+
+Transaction
+Reflection API
+pagination generally used for reading
+batch processing is basically used for writing
