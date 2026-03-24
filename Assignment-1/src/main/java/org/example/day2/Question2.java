@@ -1,5 +1,5 @@
 package org.example.day2;
-class Solution{
+class Solution2{
     public int maxSubarray(int [] nums){
         int n=nums.length;
 
@@ -17,7 +17,7 @@ class Solution{
 public class Question2 {
     static void main(String[] args) {
         int nums[]={-2, 1, -3, 4, -1, 2, 1, -5, 4};
-        Solution obj=new Solution();
+        Solution2 obj=new Solution2();
         int result=obj.maxSubarray(nums);
         System.out.println(result);
     }
