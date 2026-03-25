@@ -1,4 +1,8 @@
 package org.example.day2;
+
+import java.util.HashMap;
+import java.util.Map;
+
 class Solution1 {
     private void swap(int pos1,int pos2,int nums[]){
         int temp=nums[pos1];
@@ -27,6 +31,7 @@ class Solution1 {
                     break;
             }
         }
+
     }
 }
 public class Question1 {
