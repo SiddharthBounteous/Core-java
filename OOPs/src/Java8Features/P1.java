@@ -8,7 +8,7 @@ interface FunctionalInterface1 {
 public class P1{
     public static void main(String[] args) {
         FunctionalInterface1 obj=(String value)->{
-            System.out.println("Eagle Bird");
+            System.out.println("Eagle Bird "+value);
         };
         obj.canFly("vertical");
     }

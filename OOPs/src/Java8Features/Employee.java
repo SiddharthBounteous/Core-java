@@ -1,5 +1,6 @@
 package Java8Features;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -97,5 +98,10 @@ public class Employee {
         Map<String,String> emailSort=li.stream().collect(Collectors.toMap(Employee::getEmail,Employee::getName,(o, n)->n));
 
         System.out.println(emailSort);
+
+        List<Integer> nums = Arrays.asList(1, 2, 3, 4, 5);
+
+        nums.parallelStream()
+                .forEach(x -> System.out.println(x));
     }
 }
