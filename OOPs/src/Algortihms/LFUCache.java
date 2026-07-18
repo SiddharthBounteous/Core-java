@@ -10,7 +10,7 @@ public class LFUCache {
     }
 
     public int get(int key) {
-
+    	return 5;
     }
 
     public void put(int key, int value) {
