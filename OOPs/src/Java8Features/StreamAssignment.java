@@ -101,7 +101,9 @@ public class StreamAssignment {
         System.out.println(mp);
 
         //3.
-        Map<String,List<String>>EmployeeByDepartment=li.stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.mapping(Employee::getName,Collectors.toList())));
+        Map<String,List<String>>EmployeeByDepartment=li.stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment,Collectors.mapping(Employee::getName,
+                        Collectors.toList())));
         System.out.println(EmployeeByDepartment);
 
         //4.
@@ -118,12 +120,24 @@ public class StreamAssignment {
 
         //7.
         Map<String,List<String>>partitionEmployee=li.stream().collect(Collectors.groupingBy(e->e.getSalary()>50000 ? "Salary greater than 50000":"Salary less than equal to 50000",Collectors.mapping(Employee::getName,Collectors.toList())));
+
+        Map<Boolean,List<Employee>> partitionEmployee1=li.stream()
+                        .collect(Collectors.partitioningBy(e->e.getSalary()>50000));
         System.out.println(partitionEmployee);
+        System.out.println(partitionEmployee1);
 
         //8.
         Map<String,Integer>highestSalaryByDept=li.stream().collect(Collectors.toMap(Employee::getDepartment,Employee::getSalary,Integer::max));
         System.out.println(highestSalaryByDept);
-
+        Map<String, Optional<Employee>> result =
+                li.stream()
+                        .collect(Collectors.groupingBy(
+                                Employee::getDepartment,
+                                Collectors.maxBy(
+                                        Comparator.comparing(Employee::getSalary)
+                                )
+                        ));
+        System.out.println(result);
         //9.
         System.out.println(EmployeeByDepartment);
 
@@ -131,7 +145,7 @@ public class StreamAssignment {
         System.out.println(EmployeeByDepartment);
 
         //11.
-        List<Integer>normalList=listoflist.stream().flatMap(list->list.stream()).toList();
+        List<Integer>normalList=listoflist.stream().flatMap(Collection::stream).toList();
         System.out.println(normalList);
 
         //12.

@@ -1,30 +1,24 @@
 package Java8Features;
 
-import OOPSConcept.Interface1;
-
-import java.util.Comparator;
-import java.util.concurrent.Callable;
-
 @FunctionalInterface
-interface interface1{
+public interface interface1 {
+    void greet(String name);
+}
 
-    int cal(int a,int b);
-    default int cal1(int c){
-        return c;
+class Greet implements interface1
+{
+    @Override
+    public void greet(String name)
+    {
+        System.out.println("Hello, " + name + "!");
     }
 }
 
-class class1{
-
-    static void main(String[] args) {
-
-        interface1 ans=(a, b)->{
-            int sum=0;
-            for(int i=1;i<=a;i++){
-                sum+=b;
-            }
-            return sum;
-        };
-        System.out.println(ans.cal(4,5));
+class MainApp6
+{
+    public static void main(String[] args)
+    {
+        Greet obj = new Greet();
+        obj.greet("Siddharth");   // Calls the implemented method
     }
 }

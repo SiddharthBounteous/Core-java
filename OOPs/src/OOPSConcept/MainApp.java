@@ -1,40 +1,26 @@
 package OOPSConcept;
-class classA{
-	public void display(int a,int b) {
-		System.out.println(a+b);
-	}
-	public classA() {
-		System.out.println("A Constructor");
-	}
-}
-class classB extends classA{
-	public void display(classB obj) {
-		System.out.println("B");
-	}
-	public classB() {
-//		super();
-		//Java 25 supports Flexible Constructor Bodies.
-        super();
-		System.out.println("B Constructor");
 
+interface Marker { }
 
-	}
-	
-	public classB(String name) {
-		this();
-		System.out.println("name "+name);
-		display(this);
-	}
+// Class implementing Marker
+class MyClass implements Marker
+{
+    public void display()
+    {
+        System.out.println("Display method called");
+    }
 }
-public class MainApp {
-	public static void main(String[] args) {
-//		classA objA=new classB();
-//		objA.display(10, 20);
-//		classB objB=new classB();
-//		objB.display();
-		
-		classA ob1=new classA();
-		classB ob2=new classB();
-		classB ob3=new classB("Hi");
-	}
+
+public class MainApp
+{
+    public static void main(String[] args)
+    {
+        MyClass obj = new MyClass();
+
+        if (obj instanceof Marker) {
+            obj.display();
+        } else {
+            System.out.println("Object not allowed");
+        }
+    }
 }
